@@ -3,7 +3,8 @@ import '../components/styles/style.css'
 
 const Phototextsmall = ({ link, text, title }) => {
     return (
-        <div className='photo-text text-white'
+        <div className='photo-text text-white cursor-pointer hover:opacity-90
+            transition-opacity duration-300 ease-in-out'
             style={{
                 backgroundImage: link,
                 height: '200px',

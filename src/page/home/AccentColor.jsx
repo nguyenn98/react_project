@@ -16,9 +16,9 @@ import surprising_things from '../img/surprising_things.png'
 
 const AccentColor = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
-            <div className='text-white'
-                style={{ height: '340px', backgroundColor: '#312e81' }}>
+        <div>
+            <div className='text-white dark:bg-neutral-950 bg-[#312e81]'
+                style={{ height: '340px' }}>
                 <div className='text-center pt-28' style={{ fontFamily: 'inherit' }}>
                     <b className='font-bold tracking-wide -ml-1' style={{ fontSize: '42px' }}>Lifestyle</b>
                     <p className='tracking-wider font-semibold text-slate-150 mt-4'

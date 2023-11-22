@@ -26,12 +26,16 @@ import AboutPageOne from './page/home/AboutPageOne'
 import AboutPageTwo from './page/home/AboutPageTwo'
 import ErrorPage from './page/error/ErrorPage'
 import ComingSoon from './page/error/ComingSoon'
-import IndexArchive from './layout/archive/interface/IndexArchive';
 import Boxed from './layout/boxed/interface/IndexBoxed';
+
+import IndexArchive from './layout/archive/interface/IndexArchive';
+import Contact from './page/archive/Contact'
+import Archive from './page/archive/Archive';
 
 import IndexShop from './layout/shop/interface/IndexShop';
 import ShopDemo from './page/shop/ShopDemo'
 import ShopCart from './page/shop/ShopCart'
+import MyAccount from './page/shop/MyAccount'
 
 function App() {
   return (
@@ -41,6 +45,7 @@ function App() {
           {/*1. FEATURES */}
           {/* Menu sidebar */}
           <Route index element={<HomePage />} />
+          <Route path='/home' element={<HomePage />} />
           <Route path='/trending' element={<Trending />} />
           <Route path='/lifestyle' element={<Lifestyle />} />
           <Route path='/beauty' element={<Beauty />} />
@@ -90,18 +95,20 @@ function App() {
           <Route path='/boxed' element={<Boxed />} />
         </Route>
 
-        <Route>
+        <Route element={<IndexArchive />}>
           {/* 1. FEATURES */}
           {/* Archive Page */}
-          <Route path='/archive-aligned' element={<IndexArchive/>} />
+          <Route path='/archive-aligned' element={<Archive/>} />
+          <Route path='/contact' element={<Contact />} />
         </Route>
 
         <Route element={<IndexShop />}>
           {/* 3. SHOP */}
           <Route path='/shop-demo' element={<ShopDemo />} />
           <Route path='/shop-cart' element={<ShopCart />} />
-          {/* <Route path='/my-account' element={<MyAccount />} /> */}
+          <Route path='/my-account' element={<MyAccount />} />
         </Route>
+        <Route path="/*" /* element={<h1>Not Found</h1>} */ element={<ErrorPage />} />
       </Routes>
     </>
   );

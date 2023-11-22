@@ -39,3 +39,38 @@
     background-color: rgba(12, 12, 12, 0.5);
     background-blend-mode: darken;
 }
+
+
+/* Wide */
+.image-wide{
+    display: grid;
+    place-items: center;
+    background-image: url(https://inertiawp.com/demo/wp-content/uploads/sites/2/2022/08/pexels-daria-shevtsova-698170.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(3, 3, 3, 0.295) ;
+    background-blend-mode: darken;
+}
+
+/* Contact */
+.image-contact{
+    display: grid;
+    place-items: center;
+    background-image: url(https://inertiawp.com/lifestyle-mag/wp-content/uploads/sites/12/2022/08/pexels-belle-co-672916-1536x1024.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(5, 4, 4, 0.384);
+    background-blend-mode: darken;
+}
+.ant-form-item .ant-form-item-label >label::after{
+    content: none;
+}
+#nest-messages_user_message{
+    resize: ''!important;
+    width: 900px;
+}
+
+/* Myacount password input darkmode */
+/* :where(.css-dev-only-do-not-override-1vr7spz).ant-input-affix-wrapper >input.ant-input {
+    background-color: blue;
+} */

@@ -1,19 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 import { FiChevronDown } from 'react-icons/fi'
 import { FaPinterestP } from 'react-icons/fa'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
 import { LiaShoppingBagSolid } from 'react-icons/lia'
 import { GoSearch } from 'react-icons/go'
+import { ImExit } from 'react-icons/im'
+
 import inertia_white from '../image/inertia_white.png'
+import homelander from '../image/homelander.png'
 
 import { Dropdown, Space } from 'antd';
 
 import '../../home/interface/styles.css'
 
 
-const HeaderShop = () => {
+const HeaderShop = ({ avatar, setAvatar }) => {
     const features = [
         {
             key: '1',
@@ -156,7 +159,13 @@ const HeaderShop = () => {
             label: <Link className='no-underline' to={'/maintenance'}>
                 Maintenance
             </Link>
-        }
+        },
+        {
+            key: '6',
+            label: <Link className='no-underline' to={'/contact'}>
+                Contact Page
+            </Link>
+        },
     ]
 
     const shop = [
@@ -179,8 +188,47 @@ const HeaderShop = () => {
             </Link>
         },
     ]
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+    const handleInputChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
+    };
+
+    const handleClickSearch = () => {
+        handleSearch();
+
+    }
+    const handleSearch = () => {
+        let url = searchQuery.toLowerCase().split(" ");
+        if (url.length > 1) {
+            url = url.join("-");
+        }
+        navigate(`/${url}`);
+    }
+
+    //red point    
+
+    // Sign in and sign out
+    const localHome = JSON.parse(localStorage.getItem("homelander"));
+    console.log(localHome);
+    const [text, setText] = useState(false);
+    const change = useNavigate()
+    function imgClick() {
+        setAvatar(true)
+    }
+    function logOut() {
+        localStorage.removeItem("homelander");
+        change('/my-account')
+    }
     return (
-        <div className='shadow-md shadow-neutral-100 bg-stone-950'>
+        <div className='shadow-md shadow-neutral-100 bg-stone-950 z-50'>
             <div className='border-gray-900 font-semibold text-center tracking-tight text-stone-100 font-sans -ml-1 '
                 style={{ backgroundColor: '#b18e71', height: '38px', fontSize: '14.5px', paddingTop: '8px' }}>
                 <span className='mr-2.5'>15% OFF - SALE FOR LIMITED TIME.</span>
@@ -191,42 +239,107 @@ const HeaderShop = () => {
                 </Link>
             </div>
             <div className='flex items-center -mt-3'>
-                <div className='h-20 mt-11 mr-11' style={{ width: '125px', marginLeft: '25px' }}>
-                    <img src={inertia_white} alt={inertia_white} className='ml-2' />
-                </div>
+                <Link to={'/wide'}>
+                    <div className='h-20 mt-11 mr-11' style={{ width: '125px', marginLeft: '25px' }}>
+                        <img src={inertia_white} alt={inertia_white} className='ml-2' />
+                    </div>
+                </Link>
 
-                <div className='bg-white flex items-center -mt-1 mr-5 shadow-sm rounded-xl'
+                <div className='dark:bg-neutral-900 bg-slate-50 flex items-center -mt-1 mr-5 shadow-sm rounded-xl'
                     style={{ border: '1px solid lightgrey', width: '810px', height: '48px' }}>
-                    <input className='-mt-0.5 w-52 box-border bg-white focus:outline-none tracking-wide text-stone-600' 
-                            style={{marginLeft: '17px', fontSize: '17.4px'}} placeholder='Search ...' />
+                    <input className='-mt-0.5 w-52 box-border bg-slate-50 focus:outline-none tracking-wide
+                                     text-stone-600 dark:bg-neutral-900'
+                        style={{ marginLeft: '17px', fontSize: '17.4px' }}
+                        placeholder='Search ...'
+                        value={searchQuery}
+                        onChange={handleInputChange}
+                        onKeyDown={handleKeyDown} />
                     <button className='mr-1.5 mt-1 text-center rounded text-sm font-medium pb-0.5'
-                        style={{ width: '64px', height: '34px', marginLeft: '547px' }}>
-                        <GoSearch className='w-7 h-6 text-stone-500' />
+                        style={{ width: '64px', height: '34px', marginLeft: '547px' }}
+                        onClick={handleClickSearch}>
+                        <GoSearch className='w-7 h-6 text-stone-500 hover:opacity-75 transition-opacity duration-300' />
                     </button>
                 </div>
 
                 <div className='flex items-center -mt-1'>
                     <Link to={'https://www.pinterest.com/'}>
-                        <FaPinterestP className='w-11 text-slate-50' style={{ height: '21.7px' }} />
+                        <FaPinterestP className='w-11 text-slate-50 hover:opacity-80 transition-opacity duration-300'
+                            style={{ height: '21.7px' }} />
                     </Link>
                     <Link to={'https://www.instagram.com/'}>
-                        <AiOutlineInstagram className='w-10 h-6 text-slate-50 ml-0.5' />
+                        <AiOutlineInstagram className='w-10 h-6 text-slate-50 ml-0.5 hover:opacity-80 transition-opacity duration-300' />
                     </Link>
                     <Link to={'https://twitter.com/'}>
-                        <AiOutlineTwitter className='w-10 h-6 text-slate-50 ml-1' />
+                        <AiOutlineTwitter className='w-10 h-6 text-slate-50 ml-1 hover:opacity-80 transition-opacity duration-300' />
                     </Link>
                 </div>
                 <div>
-                    <LiaShoppingBagSolid className='text-slate-50 w-10 h-7 -mt-1 ml-2.5' />
-                </div>
-                <button className='ml-6 pb-0.5 pl-0.5 text-sm font-medium tracking-widest rounded text-slate-50'
-                    style={{ border: '1px solid #edecea', width: '95px', height: '43px' }}>
-                    LOGIN
-                </button>
-            </div>
+                    <Link to={'/shop-cart'} className='no-underline'>
+                        <LiaShoppingBagSolid className='text-slate-50 w-10 h-7 -mt-1 ml-2.5 hover:opacity-90 transition-opacity duration-300' />
+                    </Link>
 
+                    {/* <p className='w-3 h-3 bg-red-700 absolute top-[74px] right-[149px] rounded-full'></p> */}
+
+                </div>
+                {!localHome ?
+                    <Link to={'/my-account'}>
+                        <button className='ml-6 pb-0.5 pl-0.5 text-sm font-medium tracking-widest rounded
+                        text-slate-50 hover:bg-neutral-700 transition ease-in-out duration-300'
+                            style={{ border: '1px solid #edecea', width: '95px', height: '43px' }}>
+                            LOGIN
+                        </button>
+                    </Link> :
+                    <div>
+                        <div className='ml-7 -mt-1 cursor-pointer w-[64.5px] h-[63.5px]'
+                            onMouseEnter={() => setText(true)}
+                            onMouseLeave={() => setText(false)}>
+                            <img src={homelander} alt={homelander} style={{ objectPosition: '-15.5px -6.5px' }}
+                                className='rounded-full object-none' onClick={imgClick}
+                            />
+                        </div>
+                        {
+                            text &&
+                            <div className=' py-2 pl-2.5 w-24 rounded-lg absolute right-9 bg-neutral-900
+                                         text-slate-50 text-sm opacity-80 shadow-lg z-50'
+                                style={{ top: '121px' }}>
+                                my account
+                            </div>
+                        }
+                        {
+                            avatar &&
+                            <div className='items-center bg-teal-200'>
+                                <div className=' py-2 pb-0.5 pl-3 h-32 shadow-2xl rounded-md absolute right-9 bg-white text-slate-950 text-sm'
+                                    style={{ border: '1px solid #e3efef', width: '340px', top: '124px' }}>
+                                    <div className='flex items-center'>
+                                        <div style={{
+                                            border: '1px solid rgb(229 229 229)', width: '59px',
+                                            height: '59px', borderRadius: '50%'
+                                        }}>
+                                            <img
+                                                src={homelander} alt={homelander}
+                                                className='rounded-full pl-0.5'
+                                                style={{ width: '55px', height: '55px' }}
+                                            />
+                                        </div>
+                                        <h4 className='ml-3.5'>{localHome}</h4>
+                                    </div>
+                                    <p style={{ width: '290px', border: '0.1px solid lightgrey', marginTop: '6px' }}></p>
+                                    <div className='flex -mt-1.5 hover:opacity-80 cursor-pointer'
+                                        onClick={logOut}>
+                                        <div className='w-9 h-9 rounded-full border-2 bg-neutral-200'>
+                                            <ImExit className='w-5 h-6 text-neutral-800 mt-1.5 ml-2' />
+                                        </div>
+                                        <p className='ml-3.5 mt-1 text-base'>Log Out</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+
+            </div>
             <div className='font-semibold text-center tracking-wider font-sans flex items-center -mt-2'
-                style={{ height: '45px'}}>
+                style={{ height: '45px' }}>
                 <div className='flex items-center justify-start w-96 ml-8'
                     style={{ fontSize: '14.4px', color: '#4c4b4b', marginTop: '9px' }}>
                     <p>

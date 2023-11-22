@@ -27,7 +27,7 @@ import Topic from '../../components/Topic'
 const Modern = () => {
     return (
         <div>
-            <div style={{ width: '89.4%', backgroundColor: '#fffefc', marginLeft: '72.5px', marginTop: '34px' }}>
+            <div style={{ width: '89.4%', marginLeft: '72.5px', paddingTop: '7px' }}>
                 <div style={{marginLeft: '120px'}}>
                     <Topic
                         headertitle='LIFESTYLE' title='24 Summer Wardrobe Staples That Are Simple, Sustainable, and Editor–Approved'

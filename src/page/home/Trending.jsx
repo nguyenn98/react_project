@@ -15,7 +15,7 @@ import podcast_playlist from '../img/podcast_playlist.png'
 
 const Trending = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='trending' />
             <div className='flex '
                 style={{ width: '89.4%', marginLeft: '72.5px', marginBottom: '105px' }}>

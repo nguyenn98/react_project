@@ -1,7 +1,7 @@
 import React from 'react'
 
 import oliver_coleman from '../img/oliver_coleman.png'
-import paleo_diet from '../img/paleo_diet.png'
+import san_francisco from '../img/san_francisco.png'
 import kitchen_essentials from '../img/kitchen_essentials.png'
 import sixDIYsummer from '../img/sixDIYsummer.png'
 import oliver_coleman_big from '../img/oliver_coleman_big.png'
@@ -27,10 +27,12 @@ import Recommended from '../../components/Recommended'
 
 const Editorial = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <div>
-                <img className='relative' style={{ height: '612px', width: '100%' }} src={paleo_diet} alt={paleo_diet} />
-                <div className='absolute -mt-36 ml-20 pl-24 pb-10 text-center rounded-lg bg-white' style={{width: '88%'}}>
+                <img className='relative object-cover' style={{ height: '612px', width: '100%', imageRendering: 'pixelated' }} 
+                    src={san_francisco} alt={san_francisco} />
+                <div className='absolute -mt-36 ml-20 pl-24 pb-10 w-[88%] h-[390px] text-center rounded-lg 
+                    dark:bg-[rgb(22,20,20)] bg-[rgb(254,254,254)] dark:shadow-lg'>
                     <Topic  
                             headertitle='TRAVEL' title='The Must-See Room In The San Francisco Decorator’s Showcase'
                             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'

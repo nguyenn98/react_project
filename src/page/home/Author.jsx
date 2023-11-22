@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Advertisement from '../../components/Advertisement'
 import Taggcol from '../../components/Taggcol'
 import Recommended from '../../components/Recommended'
 
+import oliver_coleman_big from '../img/oliver_coleman_big.png'
 import summer_wardrobe from '../img/summer_wardrobe.png'
 import gorgeous_skin from '../img/gorgeous_skin.png'
 import coconut_oil from '../img/coconut_oil.png'
@@ -15,18 +17,43 @@ import surprising_things from '../img/surprising_things.png'
 import evidence_based from '../img/evidence_based.png'
 import ai_artwork from '../img/ai_artwork.png'
 
+import { FaHome, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa"
 
 const Author = () => {
     return (
-        <div className='-mb-5' style={{ backgroundColor: '#fffefc' }}>
-            <div className='text-white'
-                style={{ height: '340px', backgroundColor: '#312e81' }}>
-                <div className='text-center pt-28' style={{ fontFamily: 'inherit' }}>
-                    <b className='font-bold tracking-wide -ml-1' style={{ fontSize: '42px' }}>Lifestyle</b>
-                    <p className='tracking-wider font-semibold text-slate-150 mt-4'
-                        style={{ fontSize: '16.5px' }}>
-                        Science-backed wisdom to live your happiest, healthiest life.
-                    </p>
+        <div className='-mb-5 pt-[80.5px]'>
+            <div className='h-[100vh] w-[100wh] -mb-[100px]'>
+                <div className='ml-[43.15%] w-[186px] h-[184.4px] border-[3px] border-solid 
+                dark:border-[#7b79cad5] border-indigo-900 rounded-full'>
+                    <img className='w-[172px] h-[172px] ml-1 mt-1 object-cover rounded-full' 
+                    src={oliver_coleman_big} alt={oliver_coleman_big}  />
+                </div>
+                <h1 className='mt-[52.5px] text-[57px] font-semibold dark:text-slate-100 
+                    text-neutral-900 text-center' 
+                    style={{ fontFamily: 'sans-serif' }}>
+                    Oliver Coleman
+                </h1>
+                <p className='ml-[402px] mt-[19px] w-[550px] dark:text-zinc-400 text-stone-600 text-[1rem] 
+                    font-medium text-center tracking-[0.015rem]'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit euismod in pellentesque massa.
+                </p>
+                <div className='ml-[555px] mt-10 flex items-center'>
+                    <Link to={'/'}>
+                        <FaHome className='w-[23.2px] h-[23.2px] mr-[49px] dark:text-[#7776cc] 
+                        dark:hover:text-zinc-300 text-indigo-900 hover:text-zinc-600 transition-colors duration-300'/>
+                    </Link>
+                    <Link to={'https://www.facebook.com/'}>
+                        <FaFacebookF className='w-[23px] h-[23px] mr-[49px] dark:text-[#7776cc]
+                        dark:hover:text-zinc-300 text-indigo-900 hover:text-zinc-600 transition-colors duration-300' />
+                    </Link>
+                    <Link to={'https://www.instagram.com/'}>
+                        <FaInstagram className='w-[23.4px] h-[23.4px] mr-[47.7px] dark:text-[#7776cc] 
+                        dark:hover:text-zinc-300 text-indigo-900 hover:text-zinc-600 transition-colors duration-300' />
+                    </Link>
+                    <Link to={'https://www.youtube.com/'}>
+                        <FaYoutube className='w-[25.5px] h-[25.5px] dark:text-[#7776cc] 
+                        dark:hover:text-zinc-300 text-indigo-900 hover:text-zinc-600 transition-colors duration-300' />
+                    </Link>
                 </div>
             </div>
             <div className='flex '

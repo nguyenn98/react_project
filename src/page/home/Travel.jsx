@@ -12,7 +12,7 @@ import furnished_versus from '../img/furnished_versus.png'
 
 const Travel = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='Travel' />
             <div className='flex '
                 style={{ width: '89.4%', marginLeft: '72.5px', marginBottom: '105px' }}>

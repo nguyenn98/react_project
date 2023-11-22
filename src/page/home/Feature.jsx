@@ -27,45 +27,46 @@ import Recommended from '../../components/Recommended'
 
 const Feature = () => {
   return (
-    <div style={{ backgroundColor: '#fffefc' }}>
+    <div>
       <div className='flex justify-between items-center' style={{ width: '100%' }}>
         <div className='text-center -ml-12 mt-5 pr-5'>
-          <button className='ml-20 -mt-2 tracking-widest w-32 h-11 pb-0.5 bg-white text-indigo-900 hover:text-stone-700 font-semibold shadow-inherit rounded-full'
-            style={{ fontSize: '14px' }}>
+          <button className='ml-20 -mt-2 tracking-widest w-32 h-11 pb-0.5 dark:bg-neutral-900 bg-[rgb(254,254,254)] 
+            dark:text-[#7c79d3] dark:font-semibold dark:hover:text-slate-100 text-indigo-900 hover:text-stone-700 font-semibold shadow-inherit rounded-full'
+            style={{ fontSize: '14.4px' }}>
             LIFESTYLE
           </button>
           <div className='mt-7 text-center' style={{ marginLeft: '88px' }}>
-            <h1 className='tracking-wider text-stone-900 font-semibold -mt-2'
+            <h1 className='tracking-wider dark:text-slate-100 text-stone-900 font-semibold -mt-2'
               style={{ fontSize: '41px', fontFamily: 'sans-serif', lineHeight: '55px', width: '600px' }}>
               8 Homemade Coconut Oil Shampoo Recipes For Beautiful Hair
             </h1>
-            <p className='tracking-wide text-zinc-500 ml-9 font-medium'
+            <p className='tracking-wide dark:text-zinc-400 text-zinc-500 ml-9 font-medium'
               style={{ width: '530px', fontSize: '18.5px', marginTop: '23px' }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
             </p>
             <div className='flex text-sm mt-10' style={{ marginLeft: '40px', width: '520px' }}>
-              <div className='rounded-full w-10 h-10 p-0.5' style={{ border: '1px solid blue' }}>
+              <div className='rounded-full w-10 h-10 p-0.5 border-[1px] border-solid dark:border-indigo-600 border-indigo-800'>
                 <img className='rounded-full' src={maggie_brandon} alt={maggie_brandon} />
               </div>
-              <p className='text-zinc-600 font-medium tracking-wider mt-2 ml-2' style={{ fontSize: '14px' }}>
+              <p className='dark:text-zinc-400 text-zinc-600 font-medium tracking-wider mt-2 ml-2' style={{ fontSize: '14px' }}>
                 Maggie Brandon
               </p>
-              <IoMdTime className='ml-3.5 mr-1 mt-2.5 w-5 h-4 text-zinc-700 ' />
-              <p className='text-zinc-600 font-medium mt-2 ml-0.5 mr-2'> August 17, 2022 </p>
-              <p className='py-1.5 px-2 mt-0.5 ml-2.5 rounded text-zinc-600 tracking-wide font-semibold'
+              <IoMdTime className='ml-3.5 mr-1 mt-2.5 w-5 h-4 dark:text-zinc-400 text-zinc-700' />
+              <p className='dark:text-zinc-400 text-zinc-600 font-medium mt-2 ml-0.5 mr-2'> August 17, 2022 </p>
+              <p className='py-1.5 px-2 mt-0.5 ml-2.5 rounded dark:text-zinc-400 text-zinc-600 tracking-wide font-semibold'
                 style={{ border: '1px solid lightgray', fontSize: '12px' }}>
                 Updated
               </p>
-              <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 text-stone-700' />
-              <p className='text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
+              <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 dark:text-zinc-400 text-stone-700' />
+              <p className='dark:text-zinc-400 text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
             </div>
             <div className='flex ml-60'>
-              <BsBarChartFill className='ml-1 text-stone-700' style={{ marginTop: '5px' }} />
-              <p className='ml-2 text-stone-600 tracking-wide'>86 Views</p>
+              <BsBarChartFill className='ml-1 dark:text-zinc-400 text-stone-700' style={{ marginTop: '5px' }} />
+              <p className='ml-2 dark:text-zinc-400 text-stone-600 tracking-wide'>86 Views</p>
             </div>
           </div>
         </div>
-        <img style={{ width: '47%', height: '100vh' }} src={coconut_oil} alt={coconut_oil} />
+        <img className='object-cover' style={{ width: '47%', height: '100vh' }} src={coconut_oil} alt={coconut_oil} />
       </div>
 
       <div className='flex -mt-7' style={{ width: '90.2%', marginLeft: '132px' }}>

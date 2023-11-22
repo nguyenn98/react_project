@@ -26,10 +26,10 @@ import Recommended from '../../components/Recommended'
 
 const Magazine = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
-            <div className='text-slate-100 text-start ' style={{ width: '100%', height: '477px', backgroundColor: '#312e81' }}>
+        <div>
+            <div className='text-slate-100 text-start dark:bg-[#535199] bg-[#312e81]' style={{ width: '100%', height: '477px' }}>
                 <div className='pt-9'>
-                    <button className='ml-20 tracking-widest w-48 h-9 pb-0.5 text-white hover:text-slate-100 font-bold shadow-inherit'
+                    <button className='ml-20 tracking-widest w-48 h-9 pb-0.5 text-[rgb(254,254,254)] hover:opacity-80 font-bold shadow-inherit'
                         style={{ fontSize: '13px', border: '1.5px solid white' }}>
                         HEALTH & WELLNESS
                     </button>
@@ -43,12 +43,12 @@ const Magazine = () => {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                         </p>
                         <div className='flex mt-8 pb-4 ' style={{ width: '875px', borderBottom: '2px solid lightgrey' }}>
-                            <div className='rounded-full w-16 h-16 p-0.5 bg-white'>
+                            <div className='rounded-full w-16 h-16 p-0.5 bg-[rgb(254,254,254)]'>
                                 <img className='rounded-full border-none ' src={eric_gordon} alt={eric_gordon} />
                             </div>
                             <div className='ml-3 mt-2.5'>
                                 <p className='tracking-widest font-semibold' style={{ fontSize: '11.4px' }}>WRITTEN BY</p>
-                                <p className='ont-medium tracking-wider -mt-2.5 font-bold' style={{ fontSize: '15.5px' }}>
+                                <p className='ont-medium tracking-wider -mt-2.5 font-bold' style={{ fontSize: '16px' }}>
                                 Eric Gordon
                                 </p>
                             </div>
@@ -69,7 +69,8 @@ const Magazine = () => {
                 </div>
 
             </div>
-            <img style={{height: '640px', width: '100%'}} src={paleo_diet} alt={paleo_diet}/>
+            <img style={{height: '640px', width: '100vw', objectFit: 'cover'}} 
+                src={paleo_diet} alt={paleo_diet}/>
             <div className='flex -mt-6' style={{ width: '90.2%', marginLeft: '132px' }}>
                 <div className='mt-5' style={{ width: '720px', fontFamily: 'sans-serif' }}>
                     <Loremipsum />

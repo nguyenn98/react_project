@@ -13,7 +13,7 @@ import podcast_playlist from '../img/podcast_playlist.png'
 
 const Wellbeing = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='wellbeing' />
             <div className='flex '
                 style={{ width: '89.4%', marginLeft: '72.5px', marginBottom: '105px' }}>

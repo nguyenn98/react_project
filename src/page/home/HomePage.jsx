@@ -13,7 +13,7 @@ import kitchen_essentials from '../img/kitchen_essentials.png'
 const HomePage = () => {
 
   return (
-    <div style={{ backgroundColor: '#fffefc' }}>
+    <div>
       <Bluebg text='DIY' />
       <div className='flex'
         style={{ width: '89.4%', height: '1085px', marginLeft: '72.5px' }}>

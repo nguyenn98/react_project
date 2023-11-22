@@ -29,41 +29,43 @@ import Recommended from '../../components/Recommended'
 
 const PostAligned = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
-            <div className='text-start rounded-lg bg-white ' style={{ width: '100%' }}>
+        <div>
+            <div className='w-[100%] pt-1 text-start rounded-lg dark:bg-neutral-900 bg-[rgb(254,254,254)]'>
                 <div className='mb-4' style={{ marginLeft: '41px', marginTop: '37.5px' }}>
-                    <button className='mt-1.5 tracking-widest w-32 h-11 pb-14 bg-white text-indigo-900 hover:text-stone-700 font-semibold shadow-inherit rounded-full'
-                        style={{ fontSize: '14px', marginLeft: '34px' }}>
+                    <button className='mt-0.5 tracking-widest w-32 h-11 pb-14 dark:bg-inherit bg-[rgb(254,254,254)]
+                        dark:text-[#716ece] text-indigo-900 dark:hover:text-stone-300 hover:text-stone-700 
+                        font-bold shadow-inherit rounded-full transition-colors duration-200'
+                        style={{ fontSize: '12.7px', marginLeft: '34px', fontFamily:'revert' }}>
                         FOOD & RECIPES
                     </button>
-                    <h1 className='tracking-wide text-stone-900 font-semibold'
+                    <h1 className='tracking-wide dark:text-stone-100 text-stone-900 font-semibold'
                         style={{
                             fontSize: '40.5px', fontFamily: 'sans-serif', lineHeight: '55px',
                             width: '850px', marginLeft: '31.5px', marginTop: '-2.5px'
                         }}>
                         14 Best Healthy Sweet Potato Recipes
                     </h1>
-                    <p className='tracking-wide text-zinc-500 ml-8 font-medium'
+                    <p className='tracking-wide dark:text-stone-300 text-zinc-500 ml-8 font-medium'
                         style={{ width: '560px', fontSize: '18.5px', marginTop: '23px' }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                     </p>
                     <div className='flex text-sm' style={{ marginLeft: '31px', marginTop: '38px', width: '620px' }}>
-                        <div className='rounded-full w-10 h-10 p-0.5  mr-2' style={{ border: '1px solid blue' }}>
-                            <img className='rounded-full' src={maggie_brandon} alt={maggie_brandon} />
+                        <div className='rounded-full w-10 h-10 p-0.5  mr-2 border-[1px] border-solid dark:border-[#535199] border-indigo-800'>
+                            <img className='rounded-full object-cover' src={maggie_brandon} alt={maggie_brandon} />
                         </div>
-                        <p className='text-zinc-600 font-medium tracking-wide mt-2' style={{ fontSize: '14px' }}>
+                        <p className='dark:text-zinc-200 text-zinc-600 font-medium tracking-wide mt-2' style={{ fontSize: '14px' }}>
                             Maggie Brandon
                         </p>
-                        <IoMdTime className='ml-3 mt-2.5 w-5 h-4 text-zinc-700 ' />
-                        <p className='text-zinc-600 font-medium mt-2 ml-0.5 mr-2 tracking-wide'> August 17, 2022 </p>
-                        <p className='py-1.5 px-2 mt-0.5 ml-1.5 rounded text-zinc-600 tracking-wide font-semibold'
+                        <IoMdTime className='ml-3 mt-2.5 w-5 h-4 dark:text-zinc-200 text-zinc-700 ' />
+                        <p className='dark:text-zinc-200 text-zinc-600 font-medium mt-2 ml-0.5 mr-2 tracking-wide'> August 17, 2022 </p>
+                        <p className='py-1.5 px-2 mt-0.5 ml-1.5 rounded dark:text-zinc-200 text-zinc-600 tracking-wide font-semibold'
                             style={{ border: '1px solid lightgray', fontSize: '12px' }}>
                             Updated
                         </p>
-                        <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 text-stone-700' />
-                        <p className='text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
-                        <BsBarChartFill className=' ml-4 text-stone-500' style={{ marginTop: '11px' }} />
-                        <p className='mt-2 ml-2 text-stone-600 tracking-wide font-semibold'>39 Views</p>
+                        <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 dark:text-zinc-200 text-stone-700' />
+                        <p className='dark:text-zinc-200 text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
+                        <BsBarChartFill className=' ml-4 dark:text-zinc-200 text-stone-500' style={{ marginTop: '11px' }} />
+                        <p className='mt-2 ml-2 dark:text-zinc-200 text-stone-600 tracking-wide font-semibold'>39 Views</p>
                     </div>
                 </div>
                 <img style={{ height: '100vh', width: '89%', marginLeft: '75px' }} src={sweet_potato} alt={sweet_potato} />
@@ -92,7 +94,7 @@ const PostAligned = () => {
                     <Advertisement />
                 </div>
             </div>
-            <div style={{ marginTop: '50px', marginBottom: '36px' }}>
+            <div style={{ marginTop: '50px', paddingBottom: '36.7px' }}>
                 <Recommended img1={dress_outfits} img2={car_camping} img3={roasted_carrot}
                     title1='How To Dress Up & Dress Down Your Outfits'
                     title2='Car Camping 101: How to Sleep In Your Car (Safety Tips, What to Pack & More)'

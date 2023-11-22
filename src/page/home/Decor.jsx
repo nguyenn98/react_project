@@ -15,7 +15,7 @@ import according_nutritionists from '../img/according_nutritionists.png'
 
 const Decor = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='decor' />
             <div className='flex '
                 style={{ width: '89.4%', marginLeft: '72.5px', marginBottom: '105px' }}>

@@ -12,7 +12,7 @@ import podcast from '../img/podcast.png'
 
 const Nutrition = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='nutrition' />
             <div className='flex '
                 style={{ width: '89.4%', marginLeft: '72.5px', marginBottom: '105px' }}>

@@ -30,10 +30,10 @@ import '../styles/style.css'
 const Cover = () => {
     return (
         <div>
-            <div style={{ backgroundColor: '#fffefc' }}>
+            <div>
                 <div className=' image-title' style={{height: '100vh'}}>
                     <div style={{marginLeft: '170px',marginTop: '-35px' , width: '85%' }}>
-                        <Topic color='white' 
+                        <Topic color='rgb(254,254,254)' 
                             headertitle='HOME DECOR' title='Interior Design – A Comprehensive Guide for Enthusiasts'
                             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.'
                             img={simon_lambert} author='Simon Lambert' date='August 17, 2022' view='84'

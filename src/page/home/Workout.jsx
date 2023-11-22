@@ -11,7 +11,7 @@ import car_camping from '../img/car_camping.png'
 
 const Workout = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
+        <div>
             <Bluebg text='workout' />
             <div className='flex'
                 style={{ width: '89.4%', height: '1085px', marginLeft: '72.5px' }}>

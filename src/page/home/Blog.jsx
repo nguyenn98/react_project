@@ -27,45 +27,50 @@ import Recommended from '../../components/Recommended'
 
 const Blog = () => {
     return (
-        <div style={{ backgroundColor: '#fffefc' }}>
-            <div className='flex justify-start items-center pr-5 pb-5'
-                style={{ width: '100%', marginTop: '29px', borderBottom: '1px solid lightgrey' }}>
+        <div>
+            <div className='flex justify-start items-center pr-5 pb-5 pt-[31px]'
+                style={{ width: '100%', borderBottom: '1px solid lightgrey' }}>
                 <div className='mt-8' style={{ marginLeft: '43px' }}>
-                    <button className='mt-1.5 tracking-widest w-32 h-11 pb-14 bg-white text-indigo-900 hover:text-stone-700 font-semibold shadow-inherit rounded-full'
+                    <button className='mt-1.5 tracking-widest w-32 h-11 pb-14 dark:bg-neutral-900 bg-[rgb(254,254,254)] 
+                        text-indigo-900 hover:text-stone-700 font-semibold dark:text-[#6865bb] dark:hover:text-slate-300
+                        shadow-inherit rounded-full transition-colors duration-200'
                         style={{ fontSize: '14px', marginLeft: '34px' }}>
                         FOOD & RECIPES
                     </button>
-                    <h1 className='tracking-wide text-stone-900 font-semibold'
+                    <h1 className='tracking-wide dark:text-slate-200 text-stone-900 font-semibold'
                         style={{
                             fontSize: '41px', fontFamily: 'sans-serif', lineHeight: '55px',
                             width: '670px', marginLeft: '31.5px', marginTop: '-2.5px'
                         }}>
                         This Roasted Carrot and Red Pepper Hummus Flatbread Is a Delicious Way To Clean Out Your Fridge
                     </h1>
-                    <p className='tracking-wide text-zinc-500 ml-8 font-medium'
+                    <p className='tracking-wide dark:text-zinc-400 text-zinc-500 ml-8 font-medium'
                         style={{ width: '560px', fontSize: '18.5px', marginTop: '23px' }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                     </p>
                     <div className='flex text-sm mt-10' style={{ marginLeft: '35px', width: '620px' }}>
-                        <div className='rounded-full w-10 h-10 p-0.5 mr-2' style={{ border: '1px solid blue' }}>
+                        <div className='rounded-full w-10 h-10 p-0.5 mr-2 border-[1px] border-solid dark:border-[#605eaf] border-indigo-800'>
                             <img className='rounded-full' src={camille_amelio} alt={camille_amelio} />
                         </div>
-                        <p className='text-zinc-600 font-medium tracking-wider mt-2' style={{ fontSize: '14px' }}>
+                        <p className='mt-2 cursor-pointer dark:text-zinc-400 text-zinc-600 dark:hover:text-[#535199] 
+                            hover:text-indigo-900 font-medium tracking-wider transition-colors duration-200' 
+                            style={{ fontSize: '14px' }}>
                             Camille d'Amelio
                         </p>
-                        <IoMdTime className='ml-3 mr-1 mt-2.5 w-5 h-4 text-zinc-700 ' />
-                        <p className='text-zinc-600 font-medium mt-2 ml-0.5 mr-2'> August 17, 2022 </p>
-                        <p className='py-1.5 px-2 mt-0.5 ml-2.5 rounded text-zinc-600 tracking-wide font-semibold'
+                        <IoMdTime className='ml-3 mr-1 mt-2.5 w-5 h-4 dark:text-zinc-400 text-zinc-700 ' />
+                        <p className='dark:text-zinc-400 text-zinc-600 font-medium mt-2 ml-0.5 mr-2'> August 17, 2022 </p>
+                        <p className='py-1.5 px-2 mt-0.5 ml-2.5 rounded dark:text-zinc-400 text-zinc-600 tracking-wide font-semibold'
                             style={{ border: '1px solid lightgray', fontSize: '12px' }}>
                             Updated
                         </p>
-                        <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 text-stone-700' />
-                        <p className='text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
-                        <BsBarChartFill className=' ml-3 text-stone-700' style={{ marginTop: '11px' }} />
-                        <p className='mt-2 ml-2 text-stone-600 tracking-wide'>57 Views</p>
+                        <LiaBookmarkSolid className='ml-3.5 mr-1 mt-2 w-5 h-5 dark:text-zinc-400 text-stone-700' />
+                        <p className='dark:text-zinc-400 text-zinc-600 mt-2 font-semibold' style={{ fontSize: '14.4px' }}>1 min Read</p>
+                        <BsBarChartFill className='ml-3 dark:text-zinc-400 text-stone-700' style={{ marginTop: '11px' }} />
+                        <p className='mt-2 ml-2 dark:text-zinc-400 text-stone-600 tracking-wide'>57 Views</p>
                     </div>
                 </div>
-                <img className='rounded-lg ml-12' style={{ width: '36%', height: '480px' }} src={roasted_carrot} alt={roasted_carrot} />
+                <img className='rounded-[10px] ml-[50.2px] object-cover' style={{ width: '36%', height: '480px' }} 
+                    src={roasted_carrot} alt={roasted_carrot} />
             </div>
 
             <div className='flex -mt-7' style={{ width: '90.2%', marginLeft: '132px' }}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import HeaderBoxed from './HeaderBoxed'
@@ -7,6 +7,7 @@ import FooterBoxed from './FooterBoxed'
 import Phototextbig from '../../../components/Phototextbig'
 import Phototextsmall from '../../../components/Phototextsmall'
 import Taggcol from '../../../components/Taggcol'
+import Darkmode from '../../../components/Darkmode'
 
 import favorite_lifestyle from '../../../page/img/favorite_lifestyle.png'
 import coconut_oil from '../../../page/img/coconut_oil.png'
@@ -23,11 +24,16 @@ import best_meal from '../../../page/img/best_meal.png'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 
 const IndexBoxed = () => {
+    // darkmode - inertia
+    const [inertia_img, setInertia_img] = useState(false)
     return (
-        <div style={{ backgroundColor: '#c3c6cf' }}>
+        <div className='dark:bg-neutral-900 bg-[#c3c6cf]'>
+            <div onClick={() => setInertia_img(!inertia_img)} className='absolute top-40'>
+                <Darkmode />
+            </div>
             <div style={{ width: '93.7%', marginLeft: '43px' }}>
-                <HeaderBoxed />
-                <main className='bg-white pb-14' style={{ width: '100%' }}>
+                <HeaderBoxed inertia_img={inertia_img} />
+                <main className='dark:bg-neutral-900 bg-[#fefefe] pb-14' style={{ width: '100%' }}>
                     <div className='ml-7' style={{ width: '95.3%' }}>
                         <div className='flex justify-between pt-14 ml-1'>
                             <div className='mr-1' style={{ width: '49.66%' }}>
@@ -70,7 +76,7 @@ const IndexBoxed = () => {
                             </div>
                         </div>
                         <div>
-                            <h1 className='mt-16 ml-1' style={{ fontSize: '36px' }}>The Latest</h1>
+                            <h1 className='dark:text-slate-200 mt-16 ml-1' style={{ fontSize: '36px' }}>The Latest</h1>
                             <div className='flex pb-16 ml-1'>
                                 <div style={{ marginRight: '18px' }}>
                                     <Taggcol
@@ -150,8 +156,10 @@ const IndexBoxed = () => {
                                 </div>
                             </div>
                             <Link to={'/coming-soon'} className='no-underline'>
-                                <div className='mt-14 w-36 h-12 border-2 border-black bg-zinc-950 hover:bg-slate-50
-                                         text-slate-50 hover:text-zinc-950 rounded-lg transition ease-in-out duration-300'
+                                <div className='mt-14 w-36 h-12 border-2 border-slate-950 bg-zinc-950 hover:bg-slate-50
+                                        text-slate-50 hover:text-zinc-950 rounded-lg transition ease-in-out duration-300
+                                        dark:border-slate-50 dark:bg-slate-50 dark:hover:bg-stone-950 dark:text-stone-900
+                                        dark:hover:text-zinc-50'
                                     style={{ marginLeft: '44%' }}>
                                     <div className='flex text-sm ml-6 mt-2.5 '>
                                         <p className='font-bold tracking-wider font-sans'
@@ -168,6 +176,7 @@ const IndexBoxed = () => {
                 </main>
                 <FooterBoxed />
             </div>
+
         </div>
     )
 }
